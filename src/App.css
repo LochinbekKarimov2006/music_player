@@ -1,0 +1,30 @@
+
+.button-1:hover path{
+  fill:#fff;
+  transition: all .3s ease;
+}
+.button-1:hover{
+   color: #fff;
+   transition: all .3s ease;
+}
+.button-1 svg path{
+  fill:#ffffffac;
+}
+.div-1{
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 16px;
+  column-gap: 32px;
+}
+.div-2{
+  display: grid;
+  grid-template-columns: 35% 35% 10% 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+.button:hover svg path{
+  fill:aquamarine
+}
+.button svg path{
+  fill:rgb(133, 135, 135)
+}
