@@ -11,12 +11,12 @@ function Footer() {
   const [duration, setDuration] = useState(0);
   const [currentTrack, setCurrentTrack] = useState(null);
   const [tracks, setTracks] = useState([]);
+  const words = useSelector((state) => state.counter.words);
   const audioRef = useRef(null);
   const dispatch = useDispatch();
-  const words = useSelector((state) => state.counter.words);
-  // dispatch(setMalumod({ currentTrack, currentTrack }));
-  // useEffect(()=>{
-  // },[currentTrack])
+  useEffect(()=>{
+    dispatch(setMalumod({ currentTrack, currentTrack }));
+  },[currentTrack,dispatch])
   useEffect(() => {
     try {
       const storedData = localStorage.getItem("data");
