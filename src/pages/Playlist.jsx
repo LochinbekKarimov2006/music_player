@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import axiosInstance from "../utils/axiosInstance";
 import { useDispatch, useSelector } from "react-redux";
 import { setWords } from "../readx/counterSlice";
-import { addMusic } from "../readx/Layki";
+import { addMusic} from "../readx/Layki";
+
+
 function Playlist() {
   const [barchaMlaumodlar, setBarchaMalumodlar] = useState(null);
   const [malumodSaqlash, setMalumodSaqlash] = useState();
@@ -36,8 +38,8 @@ function Playlist() {
 
     getSpotifyPlaylists();
   }, []);
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error occurred: {error.message}</div>;
+  if (loading) return <div className="h-[100vh] w-[100%] flex items-center justify-center"><span className="loading loading-ring  loading-[80px]"></span></div>;
+  if (error) return <div className="h-[100vh] w-[100%] flex items-center justify-center text-[25px]">Error occurred: {error.message}</div>;
   let data = JSON.parse(localStorage.getItem("data"));
   if (!barchaMlaumodlar) {
     setBarchaMalumodlar(data);
