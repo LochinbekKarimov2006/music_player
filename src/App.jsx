@@ -52,12 +52,12 @@ getToken();
           path:"/data",
           element:<Data/>
         },
+      ]
+    },
         {
           path:"*",
           element:<Eror/>
         }
-      ]
-    }
   ])
   return (
     <RouterProvider router={router}/>
